@@ -1,0 +1,55 @@
+ let icon = document.querySelector(" .icon");
+let ul = document.querySelector("ul");
+
+icon.addEventListener("click", () => {
+  ul.classList.toggle("show");
+
+  if (ul.className == "show") {
+    document.getElementById("bar").className = "fa-solid fa-xmark";
+  } else {
+    document.getElementById("bar").className = "fa-solid fa-bars";
+  }
+});
+
+let flag = 0;
+function move(x) {
+  flag = flag + x;
+  slideshow(flag);
+}
+
+slideshow(flag); //this is done so that there is always one slide will be display every time before clicking on the arrow
+
+function slideshow(num) {
+  let slides = document.getElementsByClassName("slide");
+
+  if (num == slides.length) {
+    flag = 0;
+    num = 0;
+  }
+  if (num < 0) {
+    flag = slides.length - 1;
+    num = slides.length - 1;
+  }
+
+  for (let i of slides) {
+    i.style.display = "none";
+  }
+  slides[num].style.display = "block";
+}
+
+function Mobiles() {
+  location.href ="https://www.amazon.in/s?k=mobiles+under+25000&adgrpid=65808068104&ext_vrnc=hi&hvadid=398029740714&hvdev=c&hvlocphy=9062177&hvnetw=g&hvqmt=e&hvrand=163014259213907004&hvtargid=kwd-370161524079&hydadcr=26753_2177625&tag=googinhydr1-21&ref=pd_sl_3mzmeo6lcu_"
+}
+function Laptops() {
+  location.href = "https://www.amazon.in/s?k=for+laptops&i=computers&adgrpid=142953412544&ext_vrnc=hi&hvadid=595516681638&hvdev=c&hvlocphy=9062177&hvnetw=g&hvqmt=b&hvrand=11020356198944872108&hvtargid=kwd-299849218690&hydadcr=26952_2040148&tag=googinhydr1-21&ref=pd_sl_2xcxja6s0b_b"
+}
+function Televesion() {
+  location.href = "https://www.amazon.in/s?k=tv&adgrpid=97019772148&ext_vrnc=hi&hvadid=410436980776&hvdev=c&hvlocphy=9062177&hvnetw=g&hvqmt=b&hvrand=8379962067885917255&hvtargid=kwd-20130836&hydadcr=21663_1988903&tag=googinhydr1-21&ref=pd_sl_4a2ka3ebj0 "
+}
+function Airconvention() {
+  location.href = "https://www.amazon.in/INTERNATIONAL-CONVENTIONS-Piyush-Singh-Phogat/dp/163669282"
+}
+
+function geysers() {
+  location.href = "https://www.amazon.in/?&ext_vrnc=hi&tag=googinhydr1-21&ref=pd_sl_4b3e4wrxds_b&adgrpid=60639568242&hvpone=&hvptwo=&hvadid=617721280315&hvpos=&hvnetw=g&hvrand=4934786691250382429&hvqmt=b&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062177&hvtargid=kwd-311187680635&hydadcr=5841_2362028"
+}
